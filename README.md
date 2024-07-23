@@ -2,27 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 
-## Development server
+## Iniciar el proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    1. Se deben instalar las dependencias con `npm install`
+    
+    2. Para ejecutar el proyecto hay que ejecutar `ng serve -o` esto abrira el proyecto local en el navegador
 
-## Code scaffolding
+## Explicacion del proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    1. Se creó una carpeta llamada "services" donde se encuentra el servicio encargado de consultar los Pokémon.
 
-## Build
+    2. Se agregó HttpClientModule en imports del archivo app.module.ts.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    3. Se creó una interfaz (IPokemons) para la respuesta del servicio.
 
-## Running unit tests
+    4. Se instaló Bootstrap para visualizar de forma más rápida y fácil los Pokémon.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# PokemonApp
+    5. Para visualizar los Pokémon, se hardcodeó una variable en app.component.ts llamada baseImg: string. Luego, se creó una función que devuelve un string. Esta función recibe un Pokémon y, internamente, devuelve la URL base de la imagen + el nombre del Pokémon en minúsculas + la terminación 'jpg'. Todo esto para que en el app.component.html se implemente la función de esta manera: [src]="obtenerSrcImagen(pokemon)".
